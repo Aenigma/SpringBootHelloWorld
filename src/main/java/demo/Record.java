@@ -1,14 +1,22 @@
 package demo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * @author Kevin
  */
+@Entity
 public class Record {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     long recordId;
-    long userId;
 
+    long userId;
+    
     Date start;
     Date end;
 
